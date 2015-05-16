@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 workon web-reader
-web-reader converter
+web-reader converter -t yaaang@gmail.com
