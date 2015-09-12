@@ -1,0 +1,2 @@
+bind up:alt,cmd resize +0 +100
+bind down:alt,cmd resize +0 -100
