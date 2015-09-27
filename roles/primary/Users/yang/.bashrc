@@ -2,8 +2,27 @@
 
 source $BASH_IT/bash_it.sh # virtualenvwrapper.sh-2.7
 
-chrome() {
-  open -a Google\ Chrome "$@"
+. virtualenvwrapper.sh-2.7
+
+unalias c - ..
+
+alias l='gls --color=auto'
+
+c() {
+  cd "$@"
+  l
+}
+
+alias -- -='c -'
+alias gd='git diff'
+
+..() {
+  local count=${1:-1} path=
+  for i in $(seq $count)
+  do
+    path=${path:-}../
+  done
+  c $path
 }
 
 rsync-sales() {
@@ -85,5 +104,3 @@ rsync-p2() {
     ~/proj/sales/sandbox/p2/ \
     keystone:pod/sales/sandbox/p2/
 }
-
-. virtualenvwrapper.sh-2.7
