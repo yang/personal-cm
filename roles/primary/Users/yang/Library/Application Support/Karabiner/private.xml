@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<root>
+  <appdef>
+    <appname>MacVim</appname>
+    <equal>org.vim.MacVim</equal>
+  </appdef>
+  <appdef>
+    <appname>IntelliJ</appname>
+    <equal>com.jetbrains.intellij</equal>
+  </appdef>
+  <item>
+    <name>Change Right Option key to Control</name>
+    <identifier>private.remap_rightOption_to_control</identifier>
+    <only>MacVim, IntelliJ</only>
+    <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::CONTROL_R</autogen>
+  </item>
+</root>
