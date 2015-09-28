@@ -1,0 +1,3 @@
+nmap <space> <c-f>
+nmap <c-space> <c-b>
+nmap <leader><space> <c-b>
