@@ -25,6 +25,12 @@ alias gd='git diff'
   c $path
 }
 
+go-wab() {
+  c ~/proj/wab/
+  workon wab
+  . ~/.node/wab-4.1.0/bin/activate
+}
+
 rsync-sales() {
   bash ~/proj/sales/scripts/rsync.bash "$@"
 }
