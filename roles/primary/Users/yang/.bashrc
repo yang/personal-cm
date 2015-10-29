@@ -52,6 +52,17 @@ rsync-p2-from-keystone() { rsync-sales keystone:pod/sales/sandbox/p2/ ~/proj/sal
 rsync-to-lnut() { rsync-sales ~/proj/sales/ lnut:pod/sales/ ; }
 rsync-wab-from-vm() { rsync-wab vm:proj/wab/ ~/proj/wab/ ; }
 rsync-wab-to-vm() { rsync-wab ~/proj/wab/ vm:proj/wab/ ; }
+rsync-webreader-to-nut() { rsync-webreader ~/proj/web-reader/ nut:web-reader/ ; }
+
+rsync-webreader() {
+  rsync -ril \
+    --exclude '*.egg-info' \
+    --exclude '.git/' \
+    --include '*/' \
+    --include '*.py' \
+    --exclude '*' \
+    "$@"
+}
 
 rsync-p2() {
   rsync -ril \
