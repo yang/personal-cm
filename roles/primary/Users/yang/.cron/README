@@ -1,0 +1,5 @@
+To use these, you need to first:
+
+  ln -s $PWD ~/.cron
+
+from this directory.
