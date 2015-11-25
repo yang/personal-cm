@@ -54,7 +54,7 @@ rsync-from-vm() { rsync-sales vm:proj/sales/ ~/proj/sales/ ; }
 rsync-to-vm() { rsync-sales ~/proj/sales/ vm:proj/sales/ ; }
 rsync-to-pod@keystone() { rsync-sales ~/proj/sales/ pod@keystone:pod/sales-dev/ ; }
 rsync-to-keystone() { rsync-sales ~/proj/sales/ keystone:pod/sales/ ; }
-rsync-to-playground() { rsync-sales ~/proj/sales/ playground:pod/sales/ ; }
+rsync-to-playground() { rsync-sales "$@" ~/proj/sales/ playground:pod/sales/ ; }
 rsync-from-playground() { rsync-sales playground:pod/sales/ ~/proj/sales/ ; }
 rsync-p2-from-keystone() { rsync-sales keystone:pod/sales/sandbox/p2/ ~/proj/sales/sandbox/p2/ ; }
 rsync-to-lnut() { rsync-sales ~/proj/sales/ lnut:pod/sales/ ; }
