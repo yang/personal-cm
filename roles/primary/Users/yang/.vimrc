@@ -45,3 +45,5 @@ nmap <left> h
 nmap <right> l
 nmap <up> k
 nmap <down> j
+
+nnoremap <leader>Fw :grep <cword> 
