@@ -27,6 +27,12 @@ alias gd='git diff'
   c $path
 }
 
+if false ; then
+  tree() {
+    find "$@" -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
+  }
+fi
+
 go-wab() {
   c ~/proj/wab/
   workon wab
