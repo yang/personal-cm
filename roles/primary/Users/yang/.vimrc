@@ -1,4 +1,6 @@
 " Use <https://github.com/bling/dotvim>
+" Disable AutoPairs
+let g:AutoPairsLoaded = 1
 let g:dotvim_settings = {}
 let g:dotvim_settings.version = 1
 let g:dotvim_settings.plugin_groups_exclude = []
