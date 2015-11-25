@@ -2,6 +2,8 @@
 
 source $BASH_IT/bash_it.sh # virtualenvwrapper.sh-2.7
 
+export EDITOR=vim
+
 . virtualenvwrapper.sh-2.7
 
 unalias c - ..
