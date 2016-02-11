@@ -1,3 +1,7 @@
 For systemd scripts, don't forget to run
 
   sudo systemctl reenable xxx.service
+
+To add:
+
+https://github.com/stevemao/diff-so-fancy
