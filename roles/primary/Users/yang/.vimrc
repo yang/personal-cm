@@ -47,3 +47,11 @@ nmap <up> k
 nmap <down> j
 
 nnoremap <leader>Fw :grep <cword> 
+nnoremap grr :silent grep -s -w <cword> .<cr>:copen<cr>
+nnoremap grc :silent grep -i -w <cword> .<cr>:copen<cr>
+nnoremap grl :silent grep -i <cword> .<cr>:copen<cr>
+
+
+
+" Useful shortcuts:
+" grep current word: ,fw
