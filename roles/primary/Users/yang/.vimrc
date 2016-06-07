@@ -33,7 +33,6 @@ nnoremap <silent> <leader><leader> :<C-u>Unite -toggle -auto-resize -buffer-name
 nnoremap <silent> <leader>b :<C-u>Unite -auto-resize -buffer-name=buffers buffer file_mru<cr>
 nunmap <BS>
 nnoremap [ctrlp]m :CtrlPMixed<cr>
-nmap <C-p> :CtrlPMixed<cr>
 
 " Disable bling's search regex
 nunmap /
