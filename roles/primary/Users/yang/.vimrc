@@ -11,6 +11,7 @@ set guifont=Monaco:h13
 set visualbell t_vb= " Disable beeping
 set tabstop=2 shiftwidth=2
 set noignorecase
+set hlsearch
 
 " <http://calebthompson.io/crontab-and-vim-sitting-in-a-tree/>
 autocmd filetype crontab setlocal nobackup nowritebackup
