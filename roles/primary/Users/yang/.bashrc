@@ -135,7 +135,14 @@ audio-to-video() {
   ffmpeg -loop 1 -y -i "${2:-/Users/yang/Documents/Infer white logo.png}" -i "$1" -acodec copy -vcodec libx264 -shortest "${1%.*}.avi"
 }
 
+# eg: truncate-mp3 30 hello.mp3
 truncate-mp3() {
-  local duration="$1" input="$2" output="${3:-${2%.mp3}-preview.mp3}"
+  local duration="$1" input="$2" output="${3:-${2%.mp3}-truncated.mp3}"
   ffmpeg -y -t "$duration" -i "$input" -acodec copy "$output"
+}
+
+# eg: trim-mp3 1:30:00 30 hello.mp3
+trim-mp3() {
+  local start="$1" duration="$2" input="$3" output="${4:-${3%.mp3}-trimmed.mp3}"
+  ffmpeg -y -ss "$start" -t "$duration" -i "$input" -acodec copy "$output"
 }
