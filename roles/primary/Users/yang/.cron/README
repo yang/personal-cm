@@ -3,3 +3,7 @@ To use these, you need to first:
   ln -s $PWD ~/.cron
 
 from this directory.
+
+Then use this as your crontab:
+
+  0 0 * * * bash -il /Users/yang/.cron/backup-pg.bash &> /tmp/backup-pg.log
