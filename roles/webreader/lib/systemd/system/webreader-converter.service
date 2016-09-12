@@ -1,0 +1,8 @@
+[Unit]
+Description=AudioLizard converter
+
+[Service]
+ExecStart=/bin/su yang -c 'bash /home/yang/.startup/webreader-converter.bash'
+
+[Install]
+WantedBy=multi-user.target

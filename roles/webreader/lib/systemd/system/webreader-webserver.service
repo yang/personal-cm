@@ -1,0 +1,8 @@
+[Unit]
+Description=AudioLizard web server
+
+[Service]
+ExecStart=/bin/su yang -c 'bash /home/yang/.startup/webreader-webserver.bash'
+
+[Install]
+WantedBy=multi-user.target
