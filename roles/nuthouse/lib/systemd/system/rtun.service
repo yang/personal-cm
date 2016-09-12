@@ -1,0 +1,9 @@
+[Unit]
+Description=Reverse tunneling gateway to enable firewall traversal
+
+[Service]
+ExecStart=/bin/su yang -c 'bash /home/yang/.startup/rtun.bash'
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
