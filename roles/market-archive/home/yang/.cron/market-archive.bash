@@ -1,4 +1,4 @@
 workon marketarchive
 cd /mnt/store/yang/t/
-python ~/marketarchive/dl.py &>> /tmp/marketarchive-dl.log ||
-  cat /tmp/marketarchive-dl.log
+log=/tmp/marketarchive-dl-$(date +%Y-%m-%d).log
+python ~/marketarchive/dl.py &>> $log || cat $log
