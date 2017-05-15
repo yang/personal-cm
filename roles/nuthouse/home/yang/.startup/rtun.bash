@@ -20,6 +20,6 @@ while true ; do
   ssh -N -S none -i /home/yang/.ssh/rtun \
     -R1123:localhost:22 -R5050:localhost:5050 -R8091:localhost:8091 \
     -o BatchMode=yes -o ServerAliveInterval=300 -o TCPKeepAlive=yes \
-    -o ExitOnForwardFailure=yes rtun@yz.mit.edu ;
+    -o ExitOnForwardFailure=yes rtun@yz.xvm.mit.edu ;
   sleep 5 ;
 done &>> /tmp/rtun.log
