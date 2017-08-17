@@ -132,7 +132,9 @@ rsync-p2() {
 
 audio-to-video() {
   # From <https://superuser.com/questions/1041816/combine-one-image-one-audio-file-to-make-one-video-using-ffmpeg>
-  ffmpeg -loop 1 -y -i "${2:-/Users/yang/Documents/Infer white logo.png}" -i "$1" -acodec copy -vcodec libx264 -shortest "${1%.*}.avi"
+  for i in "$@" ; do
+    ffmpeg -loop 1 -y -i '/Users/yang/Documents/Infer white logo.png' -i "$i" -acodec copy -vcodec libx264 -shortest "${i%.*}.avi"
+  done
 }
 
 # eg: truncate-mp3 30 hello.mp3
