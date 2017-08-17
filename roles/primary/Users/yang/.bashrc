@@ -61,8 +61,19 @@ rsync-to-lnut() { rsync-sales ~/proj/sales/ lnut:pod/sales/ ; }
 rsync-wab-from-vm() { rsync-wab vm:proj/wab/ ~/proj/wab/ ; }
 rsync-wab-to-vm() { rsync-wab ~/proj/wab/ vm:proj/wab/ ; }
 rsync-webreader-to-nut() { rsync-webreader ~/proj/web-reader/ nut:web-reader/ ; }
+rsync-gmailbot-to-nut() { rsync-gmailbot ~/proj/gmailbot/ nut:gmailbot/ ; }
 
 rsync-webreader() {
+  rsync -ril \
+    --exclude '*.egg-info' \
+    --exclude '.git/' \
+    --include '*/' \
+    --include '*.py' \
+    --exclude '*' \
+    "$@"
+}
+
+rsync-gmailbot() {
   rsync -ril \
     --exclude '*.egg-info' \
     --exclude '.git/' \
