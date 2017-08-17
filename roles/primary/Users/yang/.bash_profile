@@ -29,3 +29,8 @@ export SCM_CHECK=true
 #export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
 [[ -r ~/.bashrc ]] && . ~/.bashrc
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# added by Anaconda2 4.4.0 installer
+export PATH="/Users/yang/anaconda/bin:$PATH"
