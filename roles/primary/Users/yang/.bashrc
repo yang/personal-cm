@@ -159,3 +159,12 @@ trim-mp3() {
   local start="$1" duration="$2" input="$3" output="${4:-${3%.mp3}-trimmed.mp3}"
   ffmpeg -y -ss "$start" -t "$duration" -i "$input" -acodec copy "$output"
 }
+
+# eg: gits status
+gits() {
+  for i in $(ls -1d */.git) ; do
+    echo == $i ==
+    (cd "$(dirname "$i")"; git "$@"; )
+    echo
+  done
+}
