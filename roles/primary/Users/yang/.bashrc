@@ -3,6 +3,7 @@
 source $BASH_IT/bash_it.sh # virtualenvwrapper.sh-2.7
 
 export EDITOR=vim
+export PATH=~/.local/bin/:$PATH
 
 . virtualenvwrapper.sh-2.7
 
