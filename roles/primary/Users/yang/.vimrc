@@ -7,6 +7,7 @@ let g:dotvim_settings.plugin_groups_exclude = []
 source ~/.vim/vimrc
 let g:pymode_lint = 0
 let g:pymode_breakpoint = 0
+let g:ctrlp_open_new_file = 'r'
 set guifont=Monaco:h13
 set visualbell t_vb= " Disable beeping
 set tabstop=2 shiftwidth=2
